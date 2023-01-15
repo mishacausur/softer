@@ -1,11 +1,10 @@
-fn print_vec(xs: &Vec<i32>) {
-    for x in xs {
-        println!("{}", x);
-    }
+fn main() {
+    let x = 2;
+    let r = &x;
+    foo(r);
+    println!("{}", *r);
 }
 
-fn main() {
-    let xs = vec![1,2,3];
-    print_vec(&xs);
-    print_vec(&xs);
+fn foo(r: &i32) {
+    println!("{}", r);
 }
